@@ -49,6 +49,7 @@ public class OperacoesDatas {
 		System.out.println("Y1: " + sdf3.format(y1));
 		System.out.println("Y2: " + sdf3.format(y2));
 		System.out.println("------------------------------");
+		System.out.println("------------------------------");
 	}
 
 }
