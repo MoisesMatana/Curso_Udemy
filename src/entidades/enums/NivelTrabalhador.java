@@ -3,6 +3,6 @@ package entidades.enums;
 public enum NivelTrabalhador {
 
 	JUNIOR,
-	MID_LEVEL,
+	MEDIO,
 	SENIIOR;
 }
