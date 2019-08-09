@@ -1,18 +1,27 @@
 package entidades;
 
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Postagem {
 	private Date momento;
 	private String titulo;
 	private String conteudo;
-	private Integer likes;
-	
-	public Postagem(Date momento, String titulo, String conteudo, Integer likes) {
+	private Integer curtidas;
+
+	private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+	private List<Comentario> comentarios = new ArrayList<>();
+
+	public Postagem() {
+	}
+
+	public Postagem(Date momento, String titulo, String conteudo, Integer curtidas) {
 		this.momento = momento;
 		this.titulo = titulo;
 		this.conteudo = conteudo;
-		this.likes = likes;
+		this.curtidas = curtidas;
 	}
 
 	public Date getMomento() {
@@ -39,11 +48,37 @@ public class Postagem {
 		this.conteudo = conteudo;
 	}
 
-	public Integer getLikes() {
-		return likes;
+	public Integer getCurtidas() {
+		return curtidas;
 	}
 
-	public void setLikes(Integer likes) {
-		this.likes = likes;
+	public void setCurtidas(Integer curtidas) {
+		this.curtidas = curtidas;
+	}
+
+	public List<Comentario> getComentarios() {
+		return comentarios;
+	}
+
+	public void addComentario(Comentario comentario) {
+		comentarios.add(comentario);
+	}
+
+	public void removerComentario(Comentario comentario) {
+		comentarios.remove(comentario);
+	}
+
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append(titulo + "\n");
+		sb.append(curtidas);
+		sb.append(" Curtidas - ");
+		sb.append(sdf.format(momento) + "\n");
+		sb.append(conteudo + "\n");
+		sb.append("Comentários: \n");
+		for (Comentario c : comentarios) {
+			sb.append(c.getTexto()+ "\n");
+		}
+		return sb.toString();
 	}
 }

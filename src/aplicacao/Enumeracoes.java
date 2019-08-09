@@ -2,7 +2,7 @@ package aplicacao;
 
 import java.util.Date;
 
-import entidades.enums.Order;
+import entidades.Order;
 import entidades.enums.OrderStatus;
 
 public class Enumeracoes {

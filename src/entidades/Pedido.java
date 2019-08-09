@@ -1,17 +1,19 @@
-package entidades.enums;
+package entidades;
 
 import java.util.Date;
 
-public class Order {
+import entidades.enums.OrderStatus;
+
+public class Pedido {
 	private Integer id;
 	private Date moment;
 	private OrderStatus status;
 
-	public Order() {
+	public Pedido() {
 
 	}
 
-	public Order(Integer id, Date moment, OrderStatus status) {
+	public Pedido(Integer id, Date moment, OrderStatus status) {
 		this.id = id;
 		this.moment = moment;
 		this.status = status;
