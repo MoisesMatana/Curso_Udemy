@@ -56,8 +56,10 @@ public class ReservaBoa {
 
 	@Override
 	public String toString() {
-		return "\n" + "Dados da reserva: " + "\n" + "Número do quarto: " + getNumQuarto() + "\n" + "Data de entrada: "
-				+ sdf.format(getDataEntrada()) + "\n" + "Data de saída: " + sdf.format(getDataSaida()) + "\n"
-				+ "Quant de noites: " + duracao();
+		return "\n" + "Dados da reserva: " + 
+					"\n" + "Número do quarto: " + getNumQuarto() + 
+					"\n" + "Data de entrada: " + sdf.format(getDataEntrada()) + 
+					"\n" + "Data de saída: " + sdf.format(getDataSaida()) + 
+					"\n" + "Quant de noites: " + duracao();
 	}
 }

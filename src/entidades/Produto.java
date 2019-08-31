@@ -53,8 +53,8 @@ public class Produto {
 
 	public String toString() {
 		return "\n" + "Nome: " + nome + 
-					"\n" + "Valor:  $" + String.format("%.2f", preco) + 
-					"\n" + "Quant:  $" + qtd+ " unidades" + 
-					"\n" + "Total: $" + String.format("%.2f", valorTotalEstique());
+					"\n" + "Valor:  R$" + String.format("%.2f", preco) + 
+					"\n" + "Quant:  R$" + qtd+ " unidades" + 
+					"\n" + "Total: R$" + String.format("%.2f", valorTotalEstique());
 	}
 }
